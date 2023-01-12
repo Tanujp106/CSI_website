@@ -1,0 +1,166 @@
+.body{
+    color: white;
+}
+.img{
+    width: 600px;
+    height: 500px;
+    border-radius: 30px;
+}
+/*--------------------------------------------------------------------------------------------*/
+/* ---------------------------------------- MAIN LEFT ----------------------------------------*/
+.left-side{
+    margin-top: 80px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.left-subdiv{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.left-p{
+    margin-top:20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.left-para{
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+/*----------------------------------------- MAIN RIGHT ----------------------------------------- */
+.right-side{
+    margin-right: 30px;
+ display: flex;
+ margin-top: 80px;
+ flex-direction: row;
+}
+.right-subdiv{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.right-p{
+    margin-top:20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.right-para{
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+/*------------------------------------------FOOTER---------------------------------------------*/
+.last-line{
+   margin-top: 80px;
+    border: dotted;
+    width: 20%;
+    color: gray;
+    height: 1px;
+}
+
+footer{
+    background-color: rgb(58, 165, 58);
+    margin-top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+.bottom-p{
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+a{
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: white;
+}
+a:hover{
+    color: black;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ---------------------------------------- MEDIA QUERY ----------------------------------------*/
+@media only screen and (max-width: 700px)
+{
+    .heading{
+        display: flex;
+        flex-direction: column;
+        background-image: url(https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGVhZHBob25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+        background-size: 100%;
+        height: 70vh;
+        background-repeat: no-repeat;
+        
+    }
+    h1{
+        font-family: "Roboto Mono", monospace;
+        margin-top: 0px;
+        text-align: center;
+        font-size: 40px;
+        margin: 3%;
+    }
+    h3{
+        display: none;
+    }
+    
+    h4{ 
+        display: none;
+    }
+
+
+/* ---------------------------------------- MAIN LEFT ----------------------------------------*/
+.left-p{
+    margin-top:20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+.left-para{
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+/* ---------------------------------------- MAIN RIGHT ----------------------------------------*/
+
+.right-p{
+    margin-top:20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+.right-para{
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+}
+/* ---------------------------------------- END ----------------------------------------*/
