@@ -1,0 +1,220 @@
+/* ------------------EVENT PAGE CSS --------------------------- */
+.navbar {
+  background-image: linear-gradient(
+    90deg,
+    rgba(45, 68, 75, 1) 0%,
+    rgba(16, 18, 21, 1) 35%,
+    rgba(25, 34, 48, 1) 75%
+  );
+  top: 0;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #333; */
+  color: #fff;
+  
+  padding: 10px 20px;
+  padding-bottom: 5px;
+  /* background: transparent; */
+  width: 100%;
+}
+.navbar-brand {
+  padding: auto 30px;
+}
+/*.navbar_logo {
+  border-radius: 4px;
+  padding-left: 30px;
+  width: 70px;
+}
+.navbar__menu {
+  display: flex;
+  /* text-align: center; 
+  list-style: none;
+}
+.navbar__menu__item {
+  margin-left: 36px;
+  font-size: 18px;
+  font-family: "Roboto Mono", monospace;
+}
+.navbar__menu__button {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.navbar__menu__item a {
+  color: #fff;
+  text-decoration: none; 
+}*/
+.nav-item {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 36px;
+  font-size: 18px;
+}
+.nav-link {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+
+}
+.navbar-toggler
+{
+  color: #fff;
+}
+.login_btn {
+  width: 100px;
+  height: 30px;
+  color: white;
+  font-size: 16px;
+  border-radius: 50px;
+  /*padding: 5px;*/
+  background: linear-gradient(101.61deg, #00f0ff, #bc88e4);
+}
+.event_container {
+  padding: 80px 20px;
+  padding-bottom: 20px;
+  margin-left: 40px;
+  max-width: 800px;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  /* margin: 0 auto; */
+  /* margin-right: 0; */
+  font-size: 50px;
+  animation-name: scale-up;
+  animation-duration: 1.5s;
+  text-align: left;
+}
+#extra {
+  margin-top: 20px;
+  font-size: 20px;
+  animation-name: scale-up;
+  animation-duration: 1.5s;
+}
+
+.past_events {
+  padding: 60px 20px;
+  padding-bottom: 20px;
+  margin-left: 40px;
+  max-width: 800px;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  /* margin: 0 auto; */
+  /* margin-right: 0; */
+  font-size: 50px;
+  animation-name: scale-up;
+  animation-duration: 1.5s;
+  text-align: left;
+}
+/*----------------------------------------------carousel---------------------------------------------------- */
+
+
+
+/*--------------------------------------PAST EVENTS TIMELINE---------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+/* body {
+  font-family: "Poppins", sans-serif;
+} */
+
+.timeline-section {
+  /* background-color: #24292d; */
+  min-height: 100vh;
+  padding: 100px 15px;
+}
+.img{
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+}
+.timeline-items {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #2f363e;
+  left: calc(50% - 1px);
+}
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+.timeline-dot {
+  height: 16px;
+  width: 16px;
+  background-color: #eaa023;
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+.timeline-date {
+  font-size: 18px;
+  color: #eaa023;
+  margin: 6px 0 15px;
+}
+.timeline-content {
+  background-color: #2f363e;
+  padding: 30px;
+  border-radius: 45px;
+}
+.timeline-content h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.timeline-content p {
+  color: #c8c8c8;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* responsive */
+@media (max-width: 757px) {
+  .timeline-items::before {
+    left: 7px;
+  }
+  .img{
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-dot {
+    left: 0;
+  }
+}
