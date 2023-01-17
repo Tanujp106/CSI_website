@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="about1.css">
 </head>
 <body>
-        <nav class="navbar">
-            <div><img src="darkgray-01.png" alt="logo" class="navbar_logo"></div>
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item"><a href="index.html">Home</a></li>
-                <li class="navbar__menu__item"><a href="about.html">About</a></li>
-                <li class="navbar__menu__item"><a href="#footer_container">Contact Us</a></li>
-                <li class="navbar__menu__item"><a href="events.html">Events</a></li>
-                <li class="navbar__menu__button"><a href="#"><button class="login_btn">Log In</button></a></li>
-            </ul>
+    <div class="cursor"></div> 
+        <nav class="navbar navbar-expand-lg bg-transparent ">
+            <!-- <div><img src="darkgray-01.png" alt="logo" class="navbar_logo"></div>-->
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="header">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link " href="#footer_container">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link " href="events.html">Events</a></li>
+                        </ul> 
+                    </div>
+                    </ul>
+                    
+                </div>
+            
+            
         </nav>
+
+   
     <div class="about" id="about">
         
         <div class="about_container">
@@ -76,5 +93,8 @@
             <a href="#home"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="" class="footerimg"></a>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>
