@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carousel.css">
+    <title>Carousel</title>
+</head>
+<body>
+    <div class="container">
+  <div class="slider">
+    <div class="slide slide--current">
+      <div class="slide--img fadeimg">
+        <img src="https://res.cloudinary.com/valery/image/upload/v1633870488/Codepen/fantasy-16x9.webp" alt="Slide #1">
+      </div>
+      <div class="slide--desc">
+        <h2 class="fade">Gallery #1</h2>
+        <h3 class="fade">fantasy landscapes</h3>
+        <p class="fade">mini description for current gallery images</p>
+        <div class="slide--desc-link">
+          <a href="" class="fade">2 gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide--img fadeimg">
+        <img src="https://s1.hostingkartinok.com/uploads/images/2022/12/8bf1eba3f2059ad8a39d33d3a71dad6d.jpg" alt="Slide #2">
+      </div>
+      <div class="slide--desc">
+        <h2 class="fade">Gallery #2</h2>
+        <h3 class="fade">fantasy landscapes</h3>
+        <p class="fade">mini description for current gallery images</p>
+        <div class="slide--desc-link">
+          <a href="" class="fade">2 gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide--img fadeimg">
+        <img src="https://s1.hostingkartinok.com/uploads/images/2022/12/39d77c9f7ea79ac4b5838b489efe557c.jpg" alt="Slide #3">
+      </div>
+      <div class="slide--desc">
+        <h2 class="fade">Gallery #3</h2>
+        <h3 class="fade">fantasy landscapes</h3>
+        <p class="fade">mini description for current gallery images</p>
+        <div class="slide--desc-link">
+          <a href="" class="fade">2 gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="control">
+      <span class="control--prev">&lt;</span>
+      <span class="control--next">&gt;</span>
+    </div>
+  </div>
+</div>
+<script>
+    const slides = document.querySelectorAll('.slide');
+const length = slides.length;
+
+const prev = document.querySelector('.control--prev');
+const next = document.querySelector('.control--next');
+
+var index = 0;
+//console.log(slides[1]);
+
+// Previous
+prev.addEventListener( 'click', () => {
+  slides.forEach( (slide) => {
+    slide.classList.remove('slide--current');
+  } );
+  index--;
+  if ( index < 0 ) { index = length - 1; }
+  slides[index].classList.add('slide--current');
+} );
+
+// Next
+next.addEventListener( 'click', () => {
+  slides.forEach( (slide) => {
+    slide.classList.remove('slide--current');
+  } );
+  index++;
+  if ( index > ( length - 1 ) ) { index = 0; }
+  slides[index].classList.add('slide--current');
+} );
+</script>
+</body>
+</html>

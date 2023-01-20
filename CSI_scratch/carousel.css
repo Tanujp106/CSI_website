@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Flex:opsz@8..144&display=swap");
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:focus, a:active, a:visited {
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  font-size: 0;
+}
+
+/* Vars */
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+/* Style */
+body {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+a, a:visited {
+  color: #191919;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.slider {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.slide {
+  display: block;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+.slide--img {
+  font-size: 0;
+  overflow: hidden;
+}
+.slide--img img {
+  min-height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center right;
+     object-position: center right;
+  transition: all 0.3s ease-in-out;
+}
+.slide--img img:hover {
+  transform: scale(1.25);
+}
+.slide--desc {
+  margin-top: 2.5rem;
+}
+.slide--desc h2 {
+  font-size: 2.8rem;
+  color: #333333;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.slide--desc h3 {
+  font-size: 0.85rem;
+  color: #191919;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.slide--desc p {
+  margin: 2rem 0;
+}
+.slide--desc-link {
+  text-align: right;
+}
+.slide--desc-link a {
+  font-size: 1.125rem;
+  padding-left: 6rem;
+  position: relative;
+}
+.slide--desc-link a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 5.5rem;
+  height: 1px;
+  background-color: #191919;
+}
+.slide:not(.slide--current) {
+  display: none;
+}
+
+.control span {
+  font-size: 1.5rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #999999;
+  color: white;
+  cursor: pointer;
+}
+.control--prev {
+  left: 1.5rem;
+  bottom: 1rem;
+}
+.control--next {
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* Queries */
+@media screen and (min-width: 960px) {
+  .container .slide {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    justify-content: center;
+  }
+  .container .slide--img {
+    margin: 1rem;
+    position: relative;
+  }
+  .container .slide--desc {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+  }
+  .container .slide--desc::before {
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    bottom: 1rem;
+    left: -1rem;
+    width: 50%;
+    background: #999999;
+  }
+  .container .slide--desc h2 {
+    margin-top: 3.5rem;
+  }
+  .container .slide--desc p {
+    margin: 3rem 0 2rem;
+  }
+  .container .slide:not(.slide--current) {
+    display: none;
+  }
+  .control--prev {
+    left: 2.5rem;
+    bottom: 2rem;
+  }
+  .control--next {
+    top: 2rem;
+    left: calc(70% - 3.5rem);
+  }
+}
+/* Animation */
+.fade {
+  transform: translateY(100%);
+  opacity: 0;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+h2.fade {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+h3.fade {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+p.fade {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+a.fade {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.fadeimg {
+  opacity: 0;
+  -webkit-animation-name: fadeimg;
+          animation-name: fadeimg;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeimg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeimg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=carousel.css.map */
